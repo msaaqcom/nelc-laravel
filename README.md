@@ -30,7 +30,17 @@ After install the package you need to set API credentials in `config/services.ph
 Now you can send xAPI statements to NELC using `Msaaq\NelcLaravel\Nelc` facade:
 
 ```php
+use Msaaq\NelcLaravel\Nelc;
+
 app(Nelc::class)->sendStatement($statement);
+```
+
+Or
+
+```php
+use Nelc;
+
+Nelc::sendStatement($statement);
 ```
 
 Or from your controller like this:
