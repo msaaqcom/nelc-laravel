@@ -13,7 +13,7 @@ class Nelc
     public function __construct(
         private readonly string $key,
         private readonly string $secret,
-        private readonly string $platform,
+        private readonly string $platform = '',
         private readonly bool $isSandbox = false
     ) {
         $this->client = new ApiClient(
@@ -26,7 +26,7 @@ class Nelc
     public function sendStatement(StatementInterface $statement)
     {
         return StatementClient::setClient($this->client)
-                              ->setPlatform($this->platform)
+                              ->setPlatform($statement->getPlatform() ?? $this->platform)
                               ->send($statement);
     }
 }
