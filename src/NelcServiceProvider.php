@@ -13,8 +13,8 @@ class NelcServiceProvider extends ServiceProvider
             return new Nelc(
                 key: Config::get('services.nelc.key'),
                 secret: Config::get('services.nelc.secret'),
-                platformIdentifier: Config::get('services.nelc.platform.identifier'),
-                platformName: Config::get('services.nelc.platform.name'),
+                platformIdentifier: Config::get('services.nelc.platform.identifier', ''),
+                platformName: Config::get('services.nelc.platform.name', ''),
                 isSandbox: Config::get('services.nelc.sandbox'),
             );
         });
