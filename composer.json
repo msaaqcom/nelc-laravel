@@ -17,7 +17,7 @@
     "require": {
         "php": "^8.1",
         "illuminate/support": "^9",
-        "msaaq/nelc-xapi-php-sdk": "^1.0"
+        "msaaq/nelc-xapi-php-sdk": "^1.2"
     },
     "autoload": {
         "psr-4": {

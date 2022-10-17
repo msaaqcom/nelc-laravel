@@ -19,7 +19,10 @@ After install the package you need to set API credentials in `config/services.ph
     'nelc' => [
         'key' => env('NELC_KEY'),
         'secret' => env('NELC_SECRET'),
-        'platform' => env('NELC_PLATFORM'),
+        'platform' => [
+            'name' => env('NELC_PLATFORM_NAME'),
+            'identifier' => env('NELC_PLATFORM_IDENTIFIER'),
+        ],
         'sandbox' => env('NELC_SANDBOX', false),
     ],
 ]
