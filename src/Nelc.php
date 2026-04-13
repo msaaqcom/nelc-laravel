@@ -27,7 +27,7 @@ class Nelc
 
     public function sendStatement(StatementInterface $statement)
     {
-        if ( ! $this->platformIdentifier) {
+        if ($this->platformIdentifier) {
             $platform = new Platform($this->platformIdentifier, $this->platformName);
         }
 
